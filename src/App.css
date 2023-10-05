@@ -28,6 +28,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -39,8 +40,7 @@
 }
 
 button.submit {
-  background: #00c0fa;
-  background-color: #00c0fa;
+  background: rgba(71, 95, 114, .4);
   border: 0;
   box-sizing: border-box;
   color: #ffffff;
@@ -78,7 +78,7 @@ input[type="url"]:not(placeholder-shown, .demoElement), input[type="tel"]:not(pl
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   color: inherit;
@@ -86,5 +86,74 @@ input[type="url"]:not(placeholder-shown, .demoElement), input[type="tel"]:not(pl
 }
 
 body {
-  font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+}
+
+.lightBlue {
+  color: #00adea;
+}
+
+#container-header {
+  background: #22303a;
+  color: #ffffff;
+}
+
+#container-header p {
+  width: 80%;
+}
+
+.logo__item, .logoPlaceholder {
+  font-size: 2.5rem;
+  font-weight: 900;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+#container-InputForm, #container-header {
+  padding: 60px 50px 60px 50px;
+}
+
+#container-RenderImageComparison {
+  background: #171e23;
+  min-height: 100vh;
+}
+
+#container-RenderImageComparison img {
+  width: 90%;
+  object-fit: contain;
+  max-height: 90%;
+  display: block;
+  text-align: center;
+}
+
+#container-image {
+  display: flex;
+  justify-content: center;
+  /* Horizontal centering */
+  align-items: center;
+  /* Vertical centering */
+  height: 100vh;
+  /* Set the container height as needed */
+}
+
+button.submit.promptLoadOn {
+  background: #00c0fa;
+  background-color: #00c0fa;
+}
+
+button.submit.promptLoadOff {
+  display: none;
+}
+
+.logo {
+  width: 100px;
+}
+
+a {
+  color: #0099cb;
+  border-bottom: 1px solid #0099cb;
+}
+
+a:hover {
+  color: #00bffe;
+  border-color: #00bffe
 }
