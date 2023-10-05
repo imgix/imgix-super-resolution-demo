@@ -157,3 +157,7 @@ a:hover {
   color: #00bffe;
   border-color: #00bffe
 }
+
+.error {
+  color: red;
+}

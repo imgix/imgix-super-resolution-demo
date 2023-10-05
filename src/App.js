@@ -11,6 +11,7 @@ export default function App() {
   );
   const [showImage, set_showImage] = useState('original');
   const [promptLoad, set_promptLoad] = useState('promptLoadOff');
+  
 
   return (
     <div className="App grid-x" id="container">
@@ -23,6 +24,7 @@ export default function App() {
 
         showImage={showImage}
         set_showImage={set_showImage}
+
       />
 
       <RenderImageComparison
