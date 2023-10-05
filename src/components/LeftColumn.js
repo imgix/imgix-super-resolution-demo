@@ -4,6 +4,7 @@ export default function LeftColumn(props) {
   const [textInput, set_textInput] = useState(props.image);
   const [errorState, set_errorState] = useState(false);
   const [errorMessage, set_errorMessage] = useState('Invalid URL')
+  const [disableImageToRenderRadioButtons, set_disableImageToRenderRadioButtons] = useState(false)
 
   const showError = (errorState) => {
     if (!!errorState) {
@@ -45,6 +46,7 @@ export default function LeftColumn(props) {
             value={textInput}
             onChange={(e) => {
               set_textInput(e.target.value);
+              set_disableImageToRenderRadioButtons(true)
               props.set_promptLoad('promptLoadOn')
             }}
           />
@@ -85,16 +87,19 @@ export default function LeftColumn(props) {
             <label>Image to render:</label>
             <input type="radio" id="original" name="image" value="original"
               onChange={_handleRadioButtonChange}
+              disabled={disableImageToRenderRadioButtons}
               checked={props.showImage === 'original'} />
             <label htmlFor="original">Original</label>
 
             <input type="radio" id="upscale" name="image" value="upscale"
               onChange={_handleRadioButtonChange}
+              disabled={disableImageToRenderRadioButtons}
               checked={props.showImage === 'upscale'} />
             <label htmlFor="upscale">Normal upscale</label>
 
             <input type="radio" id="superres" name="image" value="superres"
               onChange={_handleRadioButtonChange}
+              disabled={disableImageToRenderRadioButtons}
               checked={props.showImage === 'superres'} />
             <label htmlFor="superres">Super resolution</label>
 
