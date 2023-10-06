@@ -18,6 +18,7 @@ export default function LeftColumn(props) {
     props.set_image(e.target.value);
     set_textInput(e.target.value);
     set_errorState(false);
+    set_disableImageToRenderRadioButtons(false)
     props.set_promptLoad('promptLoadOff');
   }
 
@@ -43,6 +44,7 @@ export default function LeftColumn(props) {
         <label>Enter an image URL with super resolution enabled:
           <input className="input large-12 medium-12 small-12"
             type="text"
+            error={`${errorState}`}
             value={textInput}
             onChange={(e) => {
               set_textInput(e.target.value);
@@ -125,9 +127,12 @@ export default function LeftColumn(props) {
               }
               props.set_image(url.origin + url.pathname);
               set_errorState(false);
+              set_disableImageToRenderRadioButtons(false)
+              props.set_promptLoad('promptLoadOff')
             } catch (error) {
                 set_errorMessage('Invalid URL. Please enter a valid URL that begins with "https://" and try again.')
               set_errorState(true);
+              props.set_promptLoad('promptLoadOff')
               // Handle the error here, such as displaying an error message to the user or taking other appropriate actions.
             }
           }}>Load image</button>
