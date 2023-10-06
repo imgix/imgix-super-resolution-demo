@@ -77,6 +77,10 @@ input[type="url"]:not(placeholder-shown, .demoElement), input[type="tel"]:not(pl
   border-color: #00c0fa !important;
 }
 
+input[error="true"]:not(placeholder-shown, .demoElement) {
+  border-color: red !important;
+}
+
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-style: normal;
@@ -141,7 +145,10 @@ button.submit.promptLoadOn {
 }
 
 button.submit.promptLoadOff {
-  display: none;
+  background: rgba(71, 95, 114, .4);
+  background-color: rgba(71, 95, 114, .4);
+  cursor: default;
+  pointer-events: none;
 }
 
 .logo {
