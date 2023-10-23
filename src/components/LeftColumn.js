@@ -39,6 +39,10 @@ export default function LeftColumn(props) {
         <div class="logo__item logo__image lightBlue logoPlaceholder">SUPER RESOLUTION DEMO</div>
         <p>This tool compares normal upscaling with our <a href="https://docs.imgix.com/apis/rendering/">Rendering API</a> to imgix's super resolution parameter. To use this tool, enter an image that does not exeed 1MP. This demo is best used with image sizes less than .5MP.</p>
         <p>See our <a href="https://docs.imgix.com/apis/rendering/super-resolution/upscale#limits"> documentation </a>for more information.</p>
+        <p><ul>
+            <li>View this page in <a href="https://codesandbox.io/p/github/imgix/imgix-super-resolution-demo/main" target="_blank">Codesandbox</a></li>
+            <li>Open this page in <a href="https://github.com/imgix/imgix-super-resolution-demo" target="_blank">Github</a></li>
+          </ul></p>
       </div>
       <div id="container-InputForm">
         <label>Enter an image URL with super resolution enabled:
