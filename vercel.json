@@ -1,12 +1,20 @@
 {
   "version": 2,
-  "public": false,
-  "github": {
-    "enabled": false
-  },
   "builds": [
-    { "src": "*.html", "use": "@vercel/static" },
-    { "src": "*.py", "use": "@vercel/python" },
-    { "src": "*.js", "use": "@vercel/node" }
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "headers": {
+        "Cache-Control": "s-maxage=1,stale-while-revalidate"
+      }
+    }
   ]
 }
