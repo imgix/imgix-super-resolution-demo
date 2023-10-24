@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "public": false,
+  "github": {
+    "enabled": false
+  },
+  "builds": [
+    { "src": "*.html", "use": "@vercel/static" },
+    { "src": "*.py", "use": "@vercel/python" },
+    { "src": "*.js", "use": "@vercel/node" }
+  ]
+}
