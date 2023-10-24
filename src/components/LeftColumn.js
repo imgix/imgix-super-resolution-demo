@@ -45,7 +45,7 @@ export default function LeftColumn(props) {
           </ul></p>
       </div>
       <div id="container-InputForm">
-        <label>Enter an image URL with super resolution enabled:
+        <label>TESTTT Enter an image URL with super resolution enabled:
           <input className="input large-12 medium-12 small-12"
             type="text"
             error={`${errorState}`}
